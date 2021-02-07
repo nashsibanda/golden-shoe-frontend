@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.navbar-brand {
+  font-weight: 700;
+
+  img {
+    width: 3rem;
+  }
+}
+
+.carousel.slide {
+
+  .carousel-inner, .carousel-item {
+    height: 100%;
+  }
+  height: 50%;
+  img {
+    height: 50%;
+    object-fit: cover;
+  }
+
+  .carousel-desc {
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+}
