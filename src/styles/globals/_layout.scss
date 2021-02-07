@@ -66,3 +66,21 @@ body {
   border-radius: 3px;
   box-shadow: 2px 2px 4px rgba(150, 149, 149, 0.4);
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 1px solid grey;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.big-button {
+  border: 1px solid #bbb;
+  box-shadow: 4px 4px 4px #ddd;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: slategray;
+  color: white;
+  font-weight: 700;
+}

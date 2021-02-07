@@ -9,6 +9,8 @@ import configureStore from "./store/store";
 import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions";
 import "./styles/main.scss";
+// import "jquery";
+// import "bootstrap/dist/js/bootstrap.bundle";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
