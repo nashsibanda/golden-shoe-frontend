@@ -1,8 +1,8 @@
 import React from 'react';
-import { Jumbotron } from 'react-bootstrap';
 import { Route, Switch } from 'react-router-dom';
 import SiteNavContainer from './header/sitenav_container';
 import CarouselContainer from './homepage/carousel_container';
+import Chat from './support/chatbot'
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -25,12 +25,12 @@ function App() {
             exact
             path="/personnel/:personnelId"
             component={PersonnelShowContainer}
-          />
+          /> */}
           <Route
             exact
-            path="/releases"
-            component={MainReleaseCatalogueContainer}
-          /> */}
+            path="/support/chat"
+            component={Chat}
+          />
           <Route
             exact
             path="/"
