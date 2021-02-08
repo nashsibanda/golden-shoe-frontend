@@ -26,9 +26,9 @@ export const receiveCategoryErrors = errors => ({
   errors,
 });
 
-export const fetchAllCategories = (pageNum, itemsPerPage) => dispatch => {
+export const fetchAllCategories = () => dispatch => {
   dispatch(categoriesLoadingOn());
-  CategoryAPIUtil.getAllCategories(pageNum, itemsPerPage)
+  CategoryAPIUtil.getAllCategories()
     .then(categories => {
       dispatch(receiveCategories(categories.data));
       dispatch(categoriesLoadingOff());

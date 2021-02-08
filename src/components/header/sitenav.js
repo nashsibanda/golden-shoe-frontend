@@ -35,7 +35,7 @@ class SiteNav extends Component {
               <NavDropdown.Item href="#support/chat">
                 Chat to our Chatbot!
               </NavDropdown.Item>
-              <NavDropdown.Item href="#support/email">
+              <NavDropdown.Item href="mailto:support@goldenshoe.com">
                 Send us an email
               </NavDropdown.Item>
               <NavDropdown.Divider />

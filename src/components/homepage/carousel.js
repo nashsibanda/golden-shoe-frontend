@@ -31,28 +31,31 @@ class DiscoverProducts extends React.Component {
     return (
       <div className="discover products-index-container">
         <div className="resource-show-section-header">
-          <Jumbotron><h2>Discover Products</h2></Jumbotron>
+          <Jumbotron>
+            <h2>Discover Products</h2>
+          </Jumbotron>
         </div>
         <div className="discover products-index-items">
           {!initialLoad || loading ? (
             <LoadingSpinner />
           ) : (
-            <Carousel activeIndex={itemIndex} onSelect={this.handleSelect}>
-            {products.map(product => (
-              <Carousel.Item key={product._id}>
-                <img
-                  className="d-block w-100"
-                  src={product.images[0].url}
-                  alt={product.name}
-                />
-                <Carousel.Caption>
-                  <h3>{product.name}</h3>
-                  <p className="carousel-desc">
-                    {product.description}
-                  </p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            ))}
+            <Carousel
+              activeIndex={itemIndex}
+              onSelect={this.handleSelect}
+            >
+              {products.map(product => (
+                <Carousel.Item key={product._id}>
+                  <img
+                    className="d-block w-100"
+                    src={product.images[0].url}
+                    alt={product.name}
+                  />
+                  <Carousel.Caption>
+                    <h3>{product.name}</h3>
+                    <p className="carousel-desc">{product.description}</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              ))}
             </Carousel>
           )}
         </div>

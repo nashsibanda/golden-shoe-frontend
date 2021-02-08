@@ -11,7 +11,7 @@ const CategoriesReducer = (state = {}, action) => {
       action.categories.forEach(cat => {
         categoriesOutput[cat._id] = cat;
       });
-      return categoriesOutput;
+      return action.categories;
     case RECEIVE_CATEGORY:
       const { category } = action;
       return Object.assign({}, state, { [category._id]: category });

@@ -4,6 +4,8 @@ export const CATEGORIES_LOADING_ON = "CATEGORIES_LOADING_ON";
 export const CATEGORIES_LOADING_OFF = "CATEGORIES_LOADING_OFF";
 export const SESSION_LOADING_ON = "SESSION_LOADING_ON";
 export const SESSION_LOADING_OFF = "SESSION_LOADING_OFF";
+export const STYLES_LOADING_ON = "STYLES_LOADING_ON";
+export const STYLES_LOADING_OFF = "STYLES_LOADING_OFF";
 export const STOCKUNITS_LOADING_ON = "STOCKUNITS_LOADING_ON";
 export const STOCKUNITS_LOADING_OFF = "STOCKUNITS_LOADING_OFF";
 export const CART_LOADING_ON = "CART_LOADING_ON";
@@ -23,6 +25,14 @@ export const categoriesLoadingOn = () => ({
 
 export const categoriesLoadingOff = () => ({
   type: CATEGORIES_LOADING_OFF,
+});
+
+export const stylesLoadingOn = () => ({
+  type: STYLES_LOADING_ON,
+});
+
+export const stylesLoadingOff = () => ({
+  type: STYLES_LOADING_OFF,
 });
 
 export const sessionLoadingOn = () => ({

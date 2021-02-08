@@ -7,6 +7,7 @@ import SessionFormModalContainer from "./session/session_form_modal_container";
 import { logout, toggleSessionFormModal } from '../actions/session_actions';
 import { connect } from 'react-redux';
 import "./util/fontawesome_library"
+import ProductsListContainer from './products/products_list_container';
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -44,12 +45,12 @@ const App = props => {
             exact
             path="/releases/:releaseId"
             component={ReleaseShowContainer}
-          />
+          /> */}
           <Route
             exact
-            path="/personnel/:personnelId"
-            component={PersonnelShowContainer}
-          /> */}
+            path="/store"
+            component={ProductsListContainer}
+          />
           <Route exact path="/support/chat" component={Chat} />
           <Route
             exact

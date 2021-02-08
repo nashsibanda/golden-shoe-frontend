@@ -26,6 +26,19 @@ export const receiveCart = cart => ({
   cart
 })
 
+export const fetchAllStock = () => dispatch => {
+  dispatch(stockUnitsLoadingOn());
+  StockUnitAPIUtil.getAllStock()
+    .then(stock => {
+      dispatch(receiveStockUnits(stock.data));
+      dispatch(stockUnitsLoadingOff());
+    })
+    .catch(err => {
+      dispatch(receiveStockUnitErrors(err.response.data));
+      dispatch(stockUnitsLoadingOff());
+    });
+};
+
 export const fetchOneStockUnit = id => dispatch => {
   dispatch(stockUnitsLoadingOn());
   StockUnitAPIUtil.getStockUnit(id)

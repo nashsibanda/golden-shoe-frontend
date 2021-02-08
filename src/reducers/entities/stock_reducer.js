@@ -11,7 +11,7 @@ const StockUnitsReducer = (state = {}, action) => {
       action.stockUnits.forEach(stock => {
         stockUnitsOutput[stock._id] = stock;
       });
-      return stockUnitsOutput;
+      return action.stockUnits;
     case RECEIVE_STOCKUNIT:
       const { stockUnit } = action;
       return Object.assign({}, state, { [stockUnit._id]: stockUnit });
